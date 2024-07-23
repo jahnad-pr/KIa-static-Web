@@ -281,7 +281,7 @@ header:hover #c-logo img,header:hover .menu.two .ul li img {
     flex-grow: 1;
     position: relative;
     background-image: url(images/ad.jpg);
-    background-size: contain;
+    background-size: 100vh;
 }
 .container .service {
     display: flex;
