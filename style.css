@@ -1,0 +1,480 @@
+/* bismillah */
+
+@font-face {
+    font-family: kia;
+    src: url(Fonts/TTF/KiaSignatureFixRegular.ttf);
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    color: white;
+    font-family: kia;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+   width: 0;
+}
+
+
+/* Contens */
+
+.page  {
+    width: 100%;
+    height: 99vh;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* page---1 ---------------------------------------------------*/
+
+/* head */
+
+.page.one {
+    height: 100vh;
+    position: relative;
+    overflow-y: hidden;
+}
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+    z-index: 0;
+}
+header {
+    width: 100vw;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(to top,transparent,black);
+    backdrop-filter: blur(10px);
+}
+section {
+    z-index: 1;
+}
+header:hover {
+    background: white;
+    color: #000;
+}
+header:hover #c-logo img,header:hover .menu.two .ul li img {
+    filter: brightness(0) invert(0);
+}
+
+.head {
+    min-width: 100vw;
+    height: auto;
+    display: flex;
+    border-bottom: 1px solid gray;
+    transform: all 1s;
+}
+.hdr {
+    flex-grow: 1;
+    margin: 0px 107.5px;
+    display: flex;
+}
+.head .menu {
+    width: auto;
+    height: 100%;
+}
+.menu .ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 113%;
+}
+.menu .ul li {
+    padding: 27.5px 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu .ul li:after {
+    content: '';
+    width: 0px;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    background:rgb(0, 0, 0);
+    transition: all .2s;
+}
+.menu .ul li:hover:after{
+    content: '';
+    width: 100px;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    background:rgb(0, 0, 0);
+}
+.pover {
+    position: relative;
+}
+.menu .ul li.nop .pover::after {
+    content: '';
+    bottom: 0;
+    position: absolute;
+    width: 85px;
+    left: 0;
+    height: 1px;
+    top: 8px;
+}
+.menu .ul li.nop:hover::after{
+    width: 0;
+}
+.menu .ul li.nop:hover .pover::after {
+    background: red;
+}
+
+.menu li p {
+    font-size: 14px;
+}
+.menu #divider {
+    height: 100%;
+    width: 20px;
+    position: relative;
+}
+.menu #divider:after {
+    content: '';
+    width: .8px;
+    height: 30%;
+    background: gray;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+}
+.menu.two .ul li img {
+    height: 15px;
+    filter: brightness(0) invert(1);
+    margin-right: 8px;
+    width: auto;    
+}
+.head #c-logo {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.head #c-logo img {
+    width: 75px;
+    filter: brightness(0) invert(1);
+}
+.next img {
+    filter: brightness(0) invert(1);
+    width: 30%;
+}
+.plus img {
+    filter: brightness(0) invert(1);
+    width: 50%;
+}
+
+/* Contents */
+
+
+.one .content {
+    width: 100vw;
+    height: calc(100vh - 85px);
+}
+.con-box {
+    width: 100vw;
+    height: 400px;
+    position: absolute;
+    bottom: 0;
+}
+.con-box .c-hd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.con-box h1 {
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 44px;
+    margin: 0;
+    margin-top: 95px;
+}
+.con-box h4 {
+    margin-top: 28px;
+    margin-bottom: 77px;
+    font-size: 18px;
+    font-weight: normal;
+}
+.con-box button {
+    padding: 18px 40px 19px;
+    font-weight: 700;
+}
+.con-box p {
+    font-size: 8px;
+    position: absolute;
+    right: 60px;
+    bottom: 40px;
+}
+.next {
+    width: 80px;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.43);
+    position: absolute;
+    top: -10%;
+    right: 70px;
+    border-radius: 555px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.plus {
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 1);
+    position: fixed;
+    top: 83%;
+    right: 30px;
+    border-radius: 555px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dots {
+    width: 55px;
+    height: 55px;
+    border: 2px dashed black;
+    position: fixed;
+    top: 82.5%;
+    right: 26px;
+    border-radius: 555px;
+    animation: loading 3s linear infinite; 
+}
+@keyframes loading {
+    0% { 
+        transform: rotate(0); 
+    }
+    100% { 
+       transform: rotate(360deg);
+    }
+}
+
+
+/* page--2 ---------------------------------------------------------------*/
+
+
+.two .container {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+}
+.container .ad {
+    flex-grow: 1;
+    position: relative;
+    background-image: url(images/ad.jpg);
+    background-size: contain;
+}
+.container .service {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 50%;
+}
+.container .service .ow{
+
+    min-width: 50%;
+    max-width: 50%;
+    min-height: 50%;
+    max-height: 50%;
+    background:#05141f;
+    color: white;
+}
+.service .ow.one {
+    background: white;
+    color: #000;
+}
+.ad h5 {
+    font-weight: 400;
+    font-size: 16px;
+    position: absolute;
+    top: 87%;
+    left: 5%;
+}
+
+.ad .dec {
+    top: 81%;
+    left: 5%;
+}
+.service img {
+    width: 70px;
+    height: 70px;
+}
+
+.service .ow{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.service .text {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    flex-grow: 0;
+    font-size: 23px;
+    margin-top: 10px;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+
+/* fooooter------------------------------------------------------------------ */
+
+/* .bottom */
+
+.page.three {
+    height: calc(90vh);
+    background: #05141f;
+    border-top: 1px solid rgba(128, 128, 128, 0.389);
+}
+footer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+}
+.top {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+}
+.bottom {
+    height: 84px;
+    min-width: 100%;
+    opacity: .5;
+}
+.bottom .pgr {
+    flex-grow: 1;
+    margin-left: 7.35%;
+    margin-right: 4.5%;
+    height: 100%;
+    display: flex;
+}
+.to-home {
+    width: 40%;
+    height: 100%;
+    font-size: 12.5px;
+    display: flex;
+    position: relative;  
+}
+.ft-decs {
+    height: 100%;
+    flex-grow: 1;
+    font-size: 12.5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.ft-decs p:first-child {
+    min-width: 57%;
+    text-align: right;
+}
+.ft-decs p:nth-child(2){
+    flex-grow: 1;
+    padding-left: 50px;
+}
+.ft-decs p:last-child{
+    position: relative;
+    left: 120px;
+    top: -7px;
+}
+.to-home img {
+    width: 15px;
+    height: 11px;
+    margin-top: 17px;
+    margin-right: 5px;
+    filter: brightness(0) invert(1);
+    opacity: .7;
+}
+.to-home p {
+    font-size: 14px;
+}
+
+
+/* top */
+
+.str {
+    width: 84.3333333%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+.top .logo {
+    width: 100%;
+    height: 20px;
+    padding-top: 36px;
+}
+.logo img {
+    height: 100%;
+    filter: brightness(0) invert(1);
+}
+.top .lists {
+    flex-grow: 1;
+    padding-top: 35px;
+    padding-bottom: 30px;
+    display: flex;
+    font-size: 16px;
+}
+.lists .li {
+    list-style: none;
+    line-height: 32px;
+}
+.top .lists .li.o {
+    font-size: 20px;
+    max-width: 17%;
+    display: flex;
+    flex-direction: column;
+}
+.li.o .space {
+    flex-grow: 1;
+}
+.li.o .social {
+    min-width: 50%;
+    max-width: 50%;
+    height: 50px;
+    display: flex;
+}
+.li.o .social img {
+    width: 25px;
+    height: 25px;
+    padding: 8px 11px 8px 11px;
+    filter: brightness(0) invert(1);
+    position: relative;
+    left: -19px;
+}
+
+.li.t ul {
+    list-style: none;
+}
+.lists .li.o {
+    opacity: 1;
+    font-weight: 600;
+}
+.lists .li.t li {
+    opacity: .6;
+    font-weight: 300;
+}
+.lists .li.t ul :first-child{
+    opacity: 1;
+    font-weight: 600;
+}
